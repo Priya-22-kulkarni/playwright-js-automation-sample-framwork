@@ -28,6 +28,7 @@ break
 }
 
 async goToCart() {
+  await this.cartBtn.waitFor({ state: 'visible', timeout: 10000 });
   await Promise.all([
     this.page.waitForNavigation({ waitUntil: 'networkidle' }),
     this.cartBtn.click()
