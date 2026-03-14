@@ -6,7 +6,7 @@ testDir:"./tests",
 
 fullyParallel:true,
 
-workers:3,
+workers:1,
 
 use:{
 headless:true,
