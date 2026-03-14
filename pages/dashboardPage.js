@@ -27,11 +27,13 @@ break
 
 }
 
-async goToCart(){
-
-await this.cartBtn.click()
-
+async goToCart() {
+  await Promise.all([
+    this.page.waitForNavigation({ waitUntil: 'networkidle' }),
+    this.cartBtn.click()
+  ]);
 }
+
 
 }
 
